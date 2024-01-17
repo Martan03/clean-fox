@@ -13,4 +13,24 @@ style. All the colors I used are set in `:root` which is located at the top of
 the file.
 
 I went for a minimalist look, with open tabs and a search bar in one
-bar, and I think it's so good.
+bar, and I think it's so good. Normally it just takes so much space.
+
+This style will definitely evolve over time as I find problems or come up
+with a good idea to make it even better.
+
+## Suggestion
+
+I recommend using [BetterFox](https://github.com/yokoffing/BetterFox),
+which solves some of the privacy issues. Firefox collects some data about you
+when you browse the web, and this `user.js` fixes that as well with some other
+nice tweaks. You can read more on the repo page.
+
+If you like this style, you can also use
+[my VSCode theme](https://marketplace.visualstudio.com/items?itemName=Martan03.kumuhana)
+that uses similar design options.
+
+## Links
+
+- **Author:** [Martan03](https://github.com/Martan03)
+- **GitHub repository:** [clean-fox](https://github.com/Martan03/clean-fox)
+- **Author website:** [martan03.github.io](https://martan03.github.io)
