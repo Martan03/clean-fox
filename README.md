@@ -38,6 +38,11 @@ that uses similar design options.
 4. Paste `userChrome.css` that you downloaded from this repo
 5. Start Firefox and enjoy!
 
+## Credits
+
+This stylesheet is based on
+[this repo](https://github.com/EricMurphyxyz/userChrome.css). Thank you!
+
 ## Links
 
 - **Author:** [Martan03](https://github.com/Martan03)
