@@ -2,7 +2,7 @@
 
 Stylesheet for Firefox to make it look better
 
-## Detailed description
+## Description
 
 I tried creating my own `userChrome.css` and this is how it came out:
 
@@ -28,6 +28,15 @@ nice tweaks. You can read more on the repo page.
 If you like this style, you can also use
 [my VSCode theme](https://marketplace.visualstudio.com/items?itemName=Martan03.kumuhana)
 that uses similar design options.
+
+## Installation
+
+1. Go to [About Profiles page](about:profiles)
+2. Find the profile you and click `Open Directory` button next to
+`Root Directory`. This should open a file explorer
+3. Create new folder called `chrome` and navigate to the created folder
+4. Paste `userChrome.css` failed you downloaded from this repo
+5. Start Firefox and enjoy!
 
 ## Links
 
