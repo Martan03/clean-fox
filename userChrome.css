@@ -129,6 +129,10 @@ toolbar#nav-bar {
     --tab-loading-fill: var(--prim) !important;
 }
 
+.tabbrowser-tab:not([pinned]) {
+    max-width: 175px !important;
+}
+
 /* Hides the hamburger menu */
 #PanelUI-menu-button {
     padding: 0px !important;
