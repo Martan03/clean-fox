@@ -177,3 +177,8 @@ toolbar#nav-bar {
     background-color: var(--selected-tab) !important;
     border-top: 1px solid var(--prim) !important;
 }
+
+/* Loading animation color */
+#tabbrowser-tabs {
+    --tab-loading-fill: var(--prim) !important;
+}
