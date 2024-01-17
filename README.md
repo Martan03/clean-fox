@@ -31,11 +31,11 @@ that uses similar design options.
 
 ## Installation
 
-1. Go to [About Profiles page](about:profiles)
-2. Find the profile you and click `Open Directory` button next to
+1. Go to About Profiles page (type `about:profile` to search bar)
+2. Find the profile you use and click `Open Directory` button next to the
 `Root Directory`. This should open a file explorer
 3. Create new folder called `chrome` and navigate to the created folder
-4. Paste `userChrome.css` failed you downloaded from this repo
+4. Paste `userChrome.css` that you downloaded from this repo
 5. Start Firefox and enjoy!
 
 ## Links
