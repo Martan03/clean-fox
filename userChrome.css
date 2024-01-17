@@ -1,17 +1,11 @@
-/* Sets accent color based on prefered color scheme */
 @media (prefers-color-scheme: dark) {
     :root {
         --accent-color: #1c1b22;
+        --prim: #3acbaf;
+        --prim-dark: #3acbaf70;
+        --selected-tab: #2a2a35;
     }
 }
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --accent-color: #FAFAFC;
-    }
-}
-
-/*====== Aesthetics ======*/
 
 #navigator-toolbox {
     border-bottom: none !important;
@@ -41,10 +35,8 @@ toolbar#nav-bar {
     border: none !important;
 }
 
-/*====== UI Settings ======*/
-
 :root {
-    --navbarWidth: 500px; /* Set width of navbar */
+    --navbarWidth: 500px;
 }
 
 /* If the window is wider than 1000px, use flex layout */
@@ -83,12 +75,13 @@ toolbar#nav-bar {
     }
 }
 
-/*====== Simplifying interface ======*/
-
-/* Autohide back button when disabled */
+/* Hides back and forward buttons when disabled */
 #back-button, #forward-button {
     transform: scale(1, 1) !important;
-    transition: margin-left 150ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 350ms var(--animation-easing-function) !important;
+    transition:
+        margin-left 150ms var(--animation-easing-function),
+        opacity 250ms var(--animation-easing-function),
+        transform 350ms var(--animation-easing-function) !important;
 }
 
 #back-button[disabled="true"], #forward-button[disabled="true"] {
@@ -98,12 +91,13 @@ toolbar#nav-bar {
     pointer-events: none !important;
 }
 
-/* Remove UI elements */
-#identity-box, /* Site information */
-#tracking-protection-icon-container, /* Shiled next to search bar */
-#page-action-buttons > :not(#urlbar-zoom-button, #star-button-box), /* All url bar icons except for zoom level and bookmarks */
-#urlbar-go-button, /* Search URL magnifying glass */
-#alltabs-button /* Menu to display all tabs at the end of tabs bar */ {
+/* Removes UI elements that just take space */
+#identity-box,
+#tracking-protection-icon-container,
+#page-action-buttons > :not(#urlbar-zoom-button, #star-button-box),
+#urlbar-go-button,
+#alltabs-button,
+#fxa-toolbar-menu-button {
     display: none !important;
 }
 
@@ -111,24 +105,24 @@ toolbar#nav-bar {
     box-shadow: none !important;
 }
 
-/* Remove "padding" left and right from tabs */
+/* Removes "padding" left and right from tabs */
 .titlebar-spacer {
     display: none !important;
 }
 
-/* Fix URL bar overlapping elements */
+/* Fixes URL bar overlapping elements */
 #urlbar-container {
     min-width: initial !important;
 }
 
-/* Remove gap after pinned tabs */
+/* Removes gap after pinned tabs */
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
 > #tabbrowser-arrowscrollbox
 > .tabbrowser-tab[first-visible-unpinned-tab] {
     margin-inline-start: 0 !important;
 }
 
-/* Hide the hamburger menu */
+/* Hides the hamburger menu */
 #PanelUI-menu-button {
     padding: 0px !important;
 }
@@ -139,4 +133,47 @@ toolbar#nav-bar {
 
 #PanelUI-menu-button .toolbarbutton-badge-stack {
     padding: 0px !important;
+}
+
+/* Recolors toolbar buttons */
+#back-button,
+#forward-button,
+#stop-reload-button,
+#unified-extensions-button,
+#tabs-newtab-button,
+.tab-close-button {
+    color: var(--prim-dark) !important;
+}
+
+#star-button {
+    fill: var(--prim-dark) !important;
+}
+
+#back-button:hover,
+#forward-button:hover,
+#stop-reload-button:hover,
+#unified-extensions-button:hover,
+#tabs-newtab-button:hover,
+.tab-close-button:hover {
+    color: var(--prim) !important;
+}
+
+#star-button:hover {
+    fill: var(--prim) !important;
+}
+
+/* Adds bottom border to toolbar */
+#titlebar, #nav-bar {
+    border-bottom: 1px solid var(--prim-dark) !important;
+}
+
+/* Sets selection color in search bar */
+#urlbar-input::selection {
+    background-color: var(--prim-dark) !important;
+}
+
+/* Changes background of selected tab and adds top border */
+.tab-background:is([selected], [multiselected]) {
+    background-color: var(--selected-tab) !important;
+    border-top: 1px solid var(--prim) !important;
 }
