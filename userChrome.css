@@ -1,6 +1,6 @@
-/* Definitions of colors */
+/* Definitions of colors and other variables */
 :root {
-    --navbarWidth: 500px;
+    --navbar-width: 600px;
     --accent-color: #1c1b22;
     --prim: #3acbaf;
     --prim-dark: #3acbaf70;
@@ -38,6 +38,9 @@ toolbar#nav-bar {
 /* Fixes URL bar overlapping elements */
 #urlbar-container {
     min-width: initial !important;
+    margin-inline: 0 !important;
+    margin-right: 2px !important;
+    background: var(--accent-color) !important;
 }
 
 #urlbar-background {
@@ -49,24 +52,28 @@ toolbar#nav-bar {
     border: none !important;
 }
 
+#toolbar-menubar {
+    display: none;
+}
+
 /* If the window is wider than 1000px, use flex layout */
 @media (min-width: 1000px) {
     #navigator-toolbox {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         flex-wrap: wrap;
     }
 
     /*  Url bar  */
     #nav-bar {
         order: 1;
-        width: var(--navbarWidth);
+        width: var(--navbar-width);
     }
 
     /* Tab bar */
     #titlebar {
         order: 2;
-        width: calc(100vw - var(--navbarWidth) - 1px);
+        width: calc(100vw - var(--navbar-width) - 1px);
     }
 
     /* Bookmarks bar */
@@ -92,13 +99,6 @@ toolbar#nav-bar {
         margin-left 150ms var(--animation-easing-function),
         opacity 250ms var(--animation-easing-function),
         transform 350ms var(--animation-easing-function) !important;
-}
-
-#back-button[disabled="true"], #forward-button[disabled="true"] {
-    margin-left: -34px !important;
-    opacity: 0 !important;
-    transform: scale(0.8, 0.8) !important;
-    pointer-events: none !important;
 }
 
 /* Removes UI elements that just take space */
@@ -128,11 +128,7 @@ toolbar#nav-bar {
 #tabbrowser-tabs {
     --tab-loading-fill: var(--prim) !important;
 }
-/* THIS BREAKS IT! I don't know why though
-.tabbrowser-tab:not([pinned]) {
-    max-width: 175px !important;
-}
-*/
+
 /* Hides the hamburger menu */
 #PanelUI-menu-button {
     padding: 0px !important;
